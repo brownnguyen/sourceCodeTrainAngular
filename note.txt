@@ -1,0 +1,28 @@
+* Module
+- Cấp cao nhất trong ứng dụng, dùng để đóng gói 1 chức năng cụ thể trong ứng dụng
+- 1 Module có thể chứa nhiều module hoặc component
+- Có nhiều loại module: Do dev tự định nghĩa, các module được angular định nghĩa sẵn
+
+* Component
+- Dùng để biểu diễn UI và logic
+- Một component bao gồm: HTML, CSS, Selector (tên thẻ component để gắn vào html), class để xử lý logic
+
+** Mối quan hệ giữa module và component: module giống như 1 group của
+component quản lý các component. 1 Module có thể quản lý nhiều component và mỗi
+component phải được quản lý bởi module nào đó
+
+Khởi chạy ứng dụng: ng serve, ứng dụng được chạy mặc định ở port 4200
+
+Lệnh tạo Component => ng g c ten-component
+Lệnh tạo Module => ng g m ten-module
+Lệnh tạo Component trong Module => ng g c ten-module --module=<Tên folder Module> --flat
+
+
+* Data binding
+	- Oneway Binding
+		+ Interpolation - Sử dụng cặp dấu {{}} - Ex: {{name}}
+		+ Property Binding - Sử dụng cặp dấu [] - Ex: [value]="name"
+		+ Event Binding - Sử dụng cặp dấu () - Ex: (click)="tenHam()"
+	- Twoway Binding
+    + Sự kết hợp giữa property & event Binding [()] - Ex: [(ngModel)]="name"
+    + Bắt buộc phải import FormsModule mới có thế sử dụng twoway-binding

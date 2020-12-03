@@ -1,0 +1,10 @@
+<nav class="nav justify-content-between px-5">
+  <div class="d-flex">
+    <a routerLink="/" class="mr-4">Home</a>
+    <a routerLink="/signin" class="mr-4">Signin</a>
+    <a routerLink="/signup">Signup</a>
+  </div>
+  <div *ngIf="user">
+    {{ user.hoTen }}
+  </div>
+</nav>

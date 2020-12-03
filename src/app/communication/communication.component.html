@@ -1,0 +1,25 @@
+<app-list-movie></app-list-movie>
+
+<h1>Thêm phim</h1>
+<div class="form-group">
+  <label for="">Ma phim</label>
+  <input type="text" class="form-control" #maphim />
+</div>
+<div class="form-group">
+  <label for="">Ten phim</label>
+  <input type="text" class="form-control" #tenphim />
+</div>
+<div class="form-group">
+  <label for="">Gia</label>
+  <input type="text" class="form-control" #giaphim />
+</div>
+<div class="form-group">
+  <label for="">Hinh anh</label>
+  <input type="text" class="form-control" #hinhanh />
+</div>
+<button
+  class="btn btn-primary"
+  (click)="themPhim(maphim.value, tenphim.value, giaphim.value, hinhanh.value)"
+>
+  Thêm phim
+</button>

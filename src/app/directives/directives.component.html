@@ -1,0 +1,109 @@
+<!-- <p>=====ngIf=====</p>
+
+<div *ngIf="isShow">
+  <p>Hello Cybersoft</p>
+  <p>FE40</p>
+</div>
+
+<button (click)="toggle()">Show/Hide</button>
+
+<div *ngIf="!isLogin; else template">
+  <p>Bạn chưa đăng nhập</p>
+  <button (click)="dangNhap()">Đăng nhập</button>
+</div> -->
+
+<!-- <div *ngIf="isLogin">
+  <p>Xin chào bạn</p>
+  <button (click)="dangXuat()">Đăng xuất</button>
+</div> -->
+
+<!-- <ng-template #template>
+  <p>Xin chào bạn</p>
+  <button (click)="dangXuat()">Đăng xuất</button>
+</ng-template>
+
+<p>======ngSwitch======</p>
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+</select>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'" style="background-color: red;">
+    Màu đỏ
+  </div>
+  <div *ngSwitchCase="'blue'" style="background-color: blue;">
+    Màu xanh dương
+  </div>
+  <div *ngSwitchCase="'green'" style="background-color: green;">
+    Màu xanh lá cây
+  </div>
+  <div *ngSwitchDefault style="background-color: orange;">
+    Màu cam
+  </div>
+</div>
+
+<p>=====ngFor=====</p>
+<!-- index, count là của angular cung cấp -->
+<!-- <p
+  *ngFor="
+    let sv of dssv;
+    let idx = index;
+    let total = count;
+    let isFirst = first;
+    let isLast = last
+  "
+>
+  {{ idx + 1 }}/{{ total }} - {{ sv.hoTen }} - {{ sv.lop }}
+</p>
+
+<ng-container *ngIf="dssv">
+  <p *ngFor="let sv of dssv; let idx = index">
+    {{ idx + 1 }}/{{ total }} - {{ sv.hoTen }} - {{ sv.lop }}
+  </p>
+</ng-container> -->
+
+<!-- <p>=====ngTemplateOutlet=====</p>
+<ng-template #template1>
+  <p>Nơi đây chứa phần giao diện lặp lại nhiều lần trong component</p>
+</ng-template>
+<ng-template #template2>
+  <p *ngFor="let sv of dssv; let idx = index">
+    {{ idx + 1 }}/{{ total }} - {{ sv.hoTen }} - {{ sv.lop }}
+  </p>
+</ng-template> -->
+
+<!-- <ng-container *ngTemplateOutlet="template1"></ng-container>
+<ng-container *ngTemplateOutlet="template1"></ng-container>
+<ng-container *ngTemplateOutlet="template1"></ng-container>
+<ng-container *ngTemplateOutlet="template2"></ng-container> -->
+<!--
+<app-button>
+  Submit
+</app-button>
+
+<app-button>
+  Cancle
+</app-button>
+
+<p>=====ngClass======</p>
+
+<p
+  *ngFor="
+    let sv of dssv;
+    let idx = index;
+    let total = count;
+    let isFirst = first;
+    let isLast = last
+  "
+  class="text-center"
+  [ngClass]="{ 'bg-primary': isFirst, 'bg-success': isLast }"
+>
+  {{ idx + 1 }}/{{ total }} - {{ sv.hoTen }} - {{ sv.lop }}
+</p>
+
+<p>======ngStyle=========</p>
+<div [ngStyle]="{ 'background-color': color }">
+  ng Style
+</div> -->

@@ -1,0 +1,96 @@
+<!-- <div class="container">
+  <div class="form-group">
+    <label for="">Mã SP</label>
+    <input type="text" class="form-control" #masp />
+  </div>
+  <div class="form-group">
+    <label for="">Tên SP</label>
+    <input type="text" class="form-control" #tensp />
+  </div>
+  <div class="form-group">
+    <label for="">Giá</label>
+    <input type="text" class="form-control" #giasp />
+  </div>
+  <button (click)="themSanPham(masp.value, tensp.value, giasp.value)">
+    Thêm sản phẩm
+  </button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+        <th>Giá</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let sp of dssp; let idx = index; let odd = odd; let even = even"
+        [ngClass]="{ 'bg-primary': odd, 'bg-success': even }"
+      >
+        <td>{{ idx + 1 }}</td>
+        <td>{{ sp.maSP }}</td>
+        <td>{{ sp.tenSP }}</td>
+        <td>{{ sp.gia }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary btn-lg"
+  data-toggle="modal"
+  data-target="#modelId"
+>
+  Launch
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modelId"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="">Tai Khoan</label>
+          <input type="text" class="form-control" #tk />
+        </div>
+        <div class="form-group">
+          <label for="">Mat Khau</label>
+          <input type="text" class="form-control" #mk />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="dangNhap(tk.value, mk.value)"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

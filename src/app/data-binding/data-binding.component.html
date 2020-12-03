@@ -1,0 +1,38 @@
+<p>{{ message }}</p>
+
+<!-- <input type="text" value="{{ message }}" /> -->
+<input type="text" [value]="message" #name />
+
+<button (click)="changeData(name.value)">Click</button>
+
+<br />
+<p>{{ fullName }}</p>
+<input
+  type="text"
+  [value]="fullName"
+  #refFullName
+  (input)="changeInputData(refFullName.value)"
+/>
+
+<br />
+<p>{{ email }}</p>
+<input type="text" [(ngModel)]="email" />
+
+<br />
+<br />
+<br />
+<h1>Register Form</h1>
+
+<div class="container">
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="text" class="form-control" [(ngModel)]="email1" />
+  </div>
+  <div class="form-group">
+    <label for="">Fullname</label>
+    <input type="text" class="form-control" #fnRef />
+  </div>
+  <button class="btn btn-success" (click)="submit(fnRef.value)">Submit</button>
+  <p>Email: {{ email1 }}</p>
+  <p>Fullname: {{ fullName1 }}</p>
+</div>
